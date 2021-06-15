@@ -39,6 +39,10 @@ body {
   padding-top: 80px;
   }
 
+.topnav a.active {
+  color: white;
+}
+
 .heading{
 	font-size: 450%;
   color: #4287f5;
