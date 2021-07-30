@@ -1,15 +1,21 @@
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Verdana, sans-serif;
-  margin: 0;
   text-align: center;
-  min-width: 1200px !important;
+  min-width: 1300px !important;
+  margin: 0px;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
   overflow: hidden;
   background-color: #4287f5;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
 }
 
 /* Style the links inside the navigation bar */
@@ -23,23 +29,21 @@ body {
 }
 
 .topnav a:hover {
-  color: white;
+  color: #000;
 }
 
 .header {
   padding: 30px;
-  width: 1263;
+  width: 100% !important;
   text-align: center;
   background: #4287f5;
   color: white;
   background-repeat: no-repeat;
   position: relative;
-  margin-top: -1px;
-  margin-bottom: 200px;
   padding-top: 80px;
   }
 
-.topnav a.active {
+.topnav a.active-link {
   color: white;
 }
 
@@ -77,26 +81,80 @@ body {
   opacity: 0.7;
 }
 
-.heading{
+.heading {
   font-size: 350%;
   color: #4287f5;
 }
 
-.heading-2{
+.heading-2 {
   font-size: 350%;
   color: white;
 }
 
-.heading-3{
+.heading-3 {
   font-size: 25px;
   margin-right: 25px;
 }
 
-.heading-4{
+.heading-4 {
   font-size: 450%;
   color: white;
   text-align: left;
 }
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #4287f5;
+  width: 95%;
+  height: 250px;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev {
+  position: absolute;
+  top: 115px;
+  left: 0px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: black;}
 
 .fa {
   font-size: 25px;
@@ -121,7 +179,7 @@ body {
 
 /* Place text to the right */
 .right {
-  text-align: right;
+  text-align: center;
 }
 
 /* Clear floats after the columns */
@@ -176,28 +234,179 @@ border-radius: 4px;
 background-color: #555;
 }
 
-.dog-img{
+.dog-img {
   position: absolute;
-  top: 35px;
-  left: 800px;
+  top: 53px;
+  right: 275px;
   height: 500px;
   transform: rotate(5deg);
 }
 
 .top-header {
   padding: 35px;
-  width: 1263;
+  width: 100% !important;
   text-align: center;
   background: #4287f5;
   color: white;
+  height: 500px;
   background-repeat: no-repeat;
   position: relative;
   margin-top: -1px;
-  margin-bottom: 200px;
   padding-top: 80px;
 }
 
-.testimonial-image{
+.testimonial-image {
   height: 100px;
-  border-radius: 20;
+  border-radius: 200%;
+}
+
+.copywrite {
+  color: #8f8f8f;
+}
+
+.types {
+  position: absolute;
+  top: 10px !important;
+  width: 100%
+}
+
+.Chihuahua {
+  position: absolute;
+  top: 900px;
+  left: 100px ;
+}
+
+.labrador {
+  position: absolute;
+  top: 900px;
+  left: 490px;
+}
+
+.Mastiff {
+  position: absolute;
+  top: 900px;
+  left: 880px ;
+}
+
+.download-button-apple {
+  margin: 5% 3% 5% 0;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 250px;
+  left: 470px;
+}
+
+.download-button-apple:hover {
+  background-color: #111;
+}
+
+.download-button-google {
+  margin: 5% 3% 5% 0;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 250px;
+  left: 700px;
+}
+
+.download-button-google:hover {
+  background-color: #111;
+}
+
+.bottom-side {
+  position: absolute;
+  top: 1600px !important;
+  width: 100%;
+}
+
+.myPage-links {
+  color: black;
+  text-decoration: none;
+}
+
+.Feedback {
+  position: absolute;
+  top: 1550px;
+  width: 100% !important;
+  z-index: 1000px;
+  text-align: center;
+}
+
+.User-Ratings {
+  position: absolute;
+  top: 2200px;
+  width: 100% !important;
+}
+
+.bottom-side {
+  position: absolute;
+  top: 2650px !important;
+  left: 0px;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 700px) {
+
+  .Chihuahua {
+    top: 800px;
+    left: 50% !important;
+  }
+
+  .labrador {
+    top: 800px;
+    left: 600px;
+  }
+
+  .Mastiff {
+    top: 800px;
+    left: 900px;
+    width: 600px;
+  }
+
+  .top-header {
+    width: 125%;
+    text-align: center;
+  }
+  .header {
+    width: 135% !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .Chihuahua {
+    left: 7%;
+  }
+
+  .labrador {
+    left: 39%;
+  }
+
+  .Mastiff {
+    left: 70%;
+  }
+
+
+@media screen and (max-width: 1200px) {
+  .Feedback {
+    width: 100% !important;
+    min-width: 1200px !important
+  }
+  .header {
+    width: 101%
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    width: 150%
+  }
 }
