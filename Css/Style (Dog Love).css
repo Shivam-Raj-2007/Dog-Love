@@ -43,7 +43,6 @@ body {
   padding-top: 80px;
   padding: 35px;
   width: 100%;
-  height: 500px;
   margin-top: -1px;
   }
 
@@ -280,7 +279,7 @@ background-color: #555;
   text-decoration: none;
   border: none;
   position: absolute;
-  left: 700px;
+  left: 650px;
 }
 
 .download-button-apple:hover {
@@ -313,4 +312,17 @@ background-color: #555;
 
 .footer-fab {
   color: black;
+}
+
+.header-2 {
+  text-align: center;
+  background: #4287f5;
+  color: white;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 80px;
+  padding: 35px;
+  width: 100%;
+  height: 400px;
+  margin-top: -1px;
 }
